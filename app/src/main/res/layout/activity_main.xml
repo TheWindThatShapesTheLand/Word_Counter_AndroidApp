@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/inputText"
+        android:hint="Введите текст"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <Button
+        android:id="@+id/btnLoadFile"
+        android:text="Загрузить файл"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnProcess"
+        android:text="Обработать"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <GridLayout
+        android:id="@+id/sortGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:visibility="gone"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btnSortAsc"
+            android:text="Частота ∧"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"/>
+
+        <Button
+            android:id="@+id/btnSortDesc"
+            android:text="Частота ∨"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"/>
+
+        <Button
+            android:id="@+id/btnSortAlphaAsc"
+            android:text="A - Я"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"/>
+
+        <Button
+            android:id="@+id/btnSortAlphaDesc"
+            android:text="Я - A"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"/>
+
+        <Button
+            android:id="@+id/btnToggleRussian"
+            android:text="Только русские слова: OFF"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"/>
+
+        <Button
+            android:id="@+id/btnClear"
+            android:text="⠀⠀⠀Очистить⠀⠀⠀⠀"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"/>
+
+    </GridLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/result"
+            android:text="Результат"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </ScrollView>
+
+</LinearLayout>
